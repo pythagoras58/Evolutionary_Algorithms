@@ -21,7 +21,18 @@ public class BiogeographySolution {
     }
 
     double evaluateFitness() {
+        /*
+        * Replace this with your objective function
+        * Example: Minimize the square of the difference
+        * from a target value (5 in this case)
+        * */
+        double targetValue = 5;
+        double sum = 0;
 
-        return 0.0;
+        for(double x : habitat){
+            sum += Math.pow(x - targetValue, 2);
+        }
+
+        return sum;
     }
 }
